@@ -104,20 +104,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                          TO(L_SYSTEM) , TO(L_ALPHA) , TO(L_ALPHA)    ,     _______ , _______          , _______
 ),
 
-//    ┌────┬────┬────┬────┬────┬─────────┐   ┌─────────┬────┬────┬────┬────┬────┐
-//    │ no │ no │ no │ no │ no │   no    │   │   no    │ no │ no │ no │ no │ no │
-//    ├────┼────┼────┼────┼────┼─────────┤   ├─────────┼────┼────┼────┼────┼────┤
-//    │ no │ no │ no │ no │ no │ QK_BOOT │   │ QK_BOOT │ no │ no │ no │ no │ no │
-//    ├────┼────┼────┼────┼────┼─────────┘   └─────────┼────┼────┼────┼────┼────┤
-//    │ no │ no │ no │ no │ no │                       │ no │ no │ no │ no │ no │
-//    └────┴────┴────┼────┼────┼─────────┐   ┌─────────┼────┼────┼────┴────┴────┘
-//                   │ no │ no │   no    │   │   no    │ no │ no │
-//                   └────┴────┴─────────┘   └─────────┴────┴────┘
+//    ┌────┬────┬────┬─────────────┬─────────────┬─────────────┐   ┌─────────────┬─────────────┬─────────────┬────┬────┬────┐
+//    │ no │ no │ no │     no      │     no      │     no      │   │     no      │     no      │     no      │ no │ no │ no │
+//    ├────┼────┼────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼────┼────┼────┤
+//    │ no │ no │ no │     no      │     no      │   QK_BOOT   │   │   QK_BOOT   │     no      │     no      │ no │ no │ no │
+//    ├────┼────┼────┼─────────────┼─────────────┼─────────────┘   └─────────────┼─────────────┼─────────────┼────┼────┼────┤
+//    │ no │ no │ no │     no      │     no      │                               │     no      │     no      │ no │ no │ no │
+//    └────┴────┴────┼─────────────┼─────────────┼─────────────┐   ┌─────────────┼─────────────┼─────────────┼────┴────┴────┘
+//                   │ TO(L_ALPHA) │ TO(L_ALPHA) │ TO(L_ALPHA) │   │ TO(L_ALPHA) │ TO(L_ALPHA) │ TO(L_ALPHA) │
+//                   └─────────────┴─────────────┴─────────────┘   └─────────────┴─────────────┴─────────────┘
 [L_SYSTEM] = LAYOUT_split_3x5_3_ex2(
-  XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,     XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX,
-  XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , QK_BOOT ,     QK_BOOT , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX,
-  XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,                         XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX,
-                                XXXXXXX , XXXXXXX , XXXXXXX ,     XXXXXXX , XXXXXXX , XXXXXXX
+  XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX     , XXXXXXX     , XXXXXXX     ,     XXXXXXX     , XXXXXXX     , XXXXXXX     , XXXXXXX , XXXXXXX , XXXXXXX,
+  XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX     , XXXXXXX     , QK_BOOT     ,     QK_BOOT     , XXXXXXX     , XXXXXXX     , XXXXXXX , XXXXXXX , XXXXXXX,
+  XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX     , XXXXXXX     ,                                 XXXXXXX     , XXXXXXX     , XXXXXXX , XXXXXXX , XXXXXXX,
+                                TO(L_ALPHA) , TO(L_ALPHA) , TO(L_ALPHA) ,     TO(L_ALPHA) , TO(L_ALPHA) , TO(L_ALPHA)
 )
 };
 /* Shortcuts for certain windows:
