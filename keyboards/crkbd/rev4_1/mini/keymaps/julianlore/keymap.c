@@ -18,17 +18,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include QMK_KEYBOARD_H
 #include "keymap_canadian_multilingual.h"
+#include "layers.h"
 
 #define TODO XXXXXXX
-
-enum layerNames {
-    L_ALPHA,
-    L_NAV,
-    L_NUM,
-    L_SYMBOL,
-    L_SHORTCUT,
-    L_SYSTEM
-};
 
 // Formatted with qmk.nvim: https://github.com/codethread/qmk.nvim/
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {

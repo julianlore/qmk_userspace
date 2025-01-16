@@ -1,0 +1,1 @@
+enum layerNames { L_ALPHA, L_NAV, L_NUM, L_SYMBOL, L_SHORTCUT, L_SYSTEM };
