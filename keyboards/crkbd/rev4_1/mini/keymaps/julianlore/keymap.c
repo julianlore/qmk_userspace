@@ -83,7 +83,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //                    └────┴──────┴──────┘   └──────────────┴─────────────┴─────────────┘
 [L_SYMBOL] = LAYOUT_split_3x5_3_ex2(
   KC_EXLM , CA_EGRV , CA_EACU , CA_CIRC , CA_GRV  , XXXXXXX ,     XXXXXXX      , CA_PIPE     , TODO        , TODO    , CA_DTIL , XXXXXXX,
-  CA_AGRV , KC_LCBR , KC_LBRC , KC_LPRN , KC_MINS , XXXXXXX ,     XXXXXXX      , KC_EQL      , KC_RPRN     , CA_RBRC , CA_RCBR , KC_COLN,
+  CA_AGRV , CA_LCBR , CA_LBRC , CA_LPRN , KC_MINS , XXXXXXX ,     XXXXXXX      , KC_EQL      , CA_RPRN     , CA_RBRC , CA_RCBR , KC_COLN,
   XXXXXXX , TODO    , CA_CCED , KC_UNDS , CA_LABK ,                              CA_RABK     , KC_PLUS     , CA_QUOT , CA_DQUO , CA_BSLS,
                                 XXXXXXX , KC_LSFT , KC_LSFT ,     TO(L_SYSTEM) , TO(L_ALPHA) , TO(L_ALPHA)
 ),
