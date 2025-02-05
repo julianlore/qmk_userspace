@@ -20,6 +20,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+#define PERMISSIVE_HOLD
 #define RGB_MATRIX_DEFAULT_VAL 100 // 0 - 255
 // For per layer RGB to work on both sides
 #define SPLIT_LAYER_STATE_ENABLE
