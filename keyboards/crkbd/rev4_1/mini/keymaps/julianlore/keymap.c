@@ -39,20 +39,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                LSFT_T(KC_TAB) , LT(L_SHORTCUT, KC_SPC) , MO(L_NAV) ,     LT(L_SYMBOL, KC_ENT) , LSFT_T(KC_BSPC) , MO(L_NUM)
 ),
 
-//    ┌──────┬────────────┬───────┬───────────┬─────────────┬─────────────┐   ┌─────┬───────────┬─────────┬───────────────┬─────────────────┬─────────┐
-//    │ esc  │    home    │  up   │    end    │    pgup     │ www_forward │   │ no  │  LCTL(c)  │ LCTL(z) │      ins      │      pscr       │ LCTL(v) │
-//    ├──────┼────────────┼───────┼───────────┼─────────────┼─────────────┤   ├─────┼───────────┼─────────┼───────────────┼─────────────────┼─────────┤
-//    │ lsft │    left    │ down  │   rght    │    pgdn     │  www_back   │   │ no  │ LSFT(ins) │  lctl   │     lsft      │      lalt       │  lgui   │
-//    ├──────┼────────────┼───────┼───────────┼─────────────┼─────────────┘   └─────┼───────────┼─────────┼───────────────┼─────────────────┼─────────┤
-//    │ lctl │ LCTL(home) │ M_CEH │ LCTL(end) │     no      │                       │ M_TMUXSCR │   tab   │ LCTL(LSFT(;)) │ LCTL(LALT(del)) │   no    │
-//    └──────┴────────────┴───────┼───────────┼─────────────┼─────────────┐   ┌─────┼───────────┼─────────┼───────────────┴─────────────────┴─────────┘
-//                                │           │ TO(L_ALPHA) │ TO(L_ALPHA) │   │ esc │    del    │  bspc   │
-//                                └───────────┴─────────────┴─────────────┘   └─────┴───────────┴─────────┘
+//    ┌──────┬────────────┬───────┬───────────┬─────────────┬─────────────┐   ┌─────┬───────────┬────────────┬───────────────┬─────────────────┬─────────┐
+//    │ esc  │    home    │  up   │    end    │    pgup     │ www_forward │   │ no  │  LCTL(c)  │  LCTL(z)   │      ins      │      pscr       │ LCTL(v) │
+//    ├──────┼────────────┼───────┼───────────┼─────────────┼─────────────┤   ├─────┼───────────┼────────────┼───────────────┼─────────────────┼─────────┤
+//    │ lsft │    left    │ down  │   rght    │    pgdn     │  www_back   │   │ no  │ LSFT(ins) │    lctl    │     lsft      │      lalt       │  lgui   │
+//    ├──────┼────────────┼───────┼───────────┼─────────────┼─────────────┘   └─────┼───────────┼────────────┼───────────────┼─────────────────┼─────────┤
+//    │ lctl │ LCTL(home) │ M_CEH │ LCTL(end) │     no      │                       │ M_TMUXSCR │    tab     │ LCTL(LSFT(;)) │ LCTL(LALT(del)) │   no    │
+//    └──────┴────────────┴───────┼───────────┼─────────────┼─────────────┐   ┌─────┼───────────┼────────────┼───────────────┴─────────────────┴─────────┘
+//                                │           │ TO(L_ALPHA) │ TO(L_ALPHA) │   │ esc │    del    │ LSFT(lgui) │
+//                                └───────────┴─────────────┴─────────────┘   └─────┴───────────┴────────────┘
 [L_NAV] = LAYOUT_split_3x5_3_ex2(
-  KC_ESC  , KC_HOME       , KC_UP   , KC_END       , KC_PGUP     , KC_WWW_FORWARD ,     XXXXXXX , LCTL(KC_C)      , LCTL(KC_Z) , KC_INSERT           , KC_PSCR            , LCTL(KC_V),
-  KC_LSFT , KC_LEFT       , KC_DOWN , KC_RIGHT     , KC_PGDN     , KC_WWW_BACK    ,     XXXXXXX , LSFT(KC_INSERT) , KC_LCTL    , KC_LSFT             , KC_LALT            , KC_LGUI   ,
-  KC_LCTL , LCTL(KC_HOME) , M_CEH   , LCTL(KC_END) , XXXXXXX     ,                                M_TMUXSCR       , KC_TAB     , LCTL(LSFT(KC_SCLN)) , LCTL(LALT(KC_DEL)) , XXXXXXX   ,
-                                      _______      , TO(L_ALPHA) , TO(L_ALPHA)    ,     KC_ESC  , KC_DEL          , KC_BSPC
+  KC_ESC  , KC_HOME       , KC_UP   , KC_END       , KC_PGUP     , KC_WWW_FORWARD ,     XXXXXXX , LCTL(KC_C)      , LCTL(KC_Z)    , KC_INSERT           , KC_PSCR            , LCTL(KC_V),
+  KC_LSFT , KC_LEFT       , KC_DOWN , KC_RIGHT     , KC_PGDN     , KC_WWW_BACK    ,     XXXXXXX , LSFT(KC_INSERT) , KC_LCTL       , KC_LSFT             , KC_LALT            , KC_LGUI   ,
+  KC_LCTL , LCTL(KC_HOME) , M_CEH   , LCTL(KC_END) , XXXXXXX     ,                                M_TMUXSCR       , KC_TAB        , LCTL(LSFT(KC_SCLN)) , LCTL(LALT(KC_DEL)) , XXXXXXX   ,
+                                      _______      , TO(L_ALPHA) , TO(L_ALPHA)    ,     KC_ESC  , KC_DEL          , LSFT(KC_LGUI)
 ),
 
 //    ┌────┬────┬────┬─────┬──────┬─────┐   ┌─────┬─────────────┬─────────────┬─────┬─────┬─────┐
