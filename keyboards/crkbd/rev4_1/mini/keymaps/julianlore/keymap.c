@@ -17,6 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include QMK_KEYBOARD_H
+#include "custom_keycodes.h"
 #include "keymap_canadian_multilingual.h"
 #include "layers.h"
 
@@ -72,17 +73,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                               _______ , KC_LSFT , _______ ,     _______ , TO(L_ALPHA) , TO(L_ALPHA)
 ),
 
-//    ┌────┬──────┬───┬────┬──────┬──────┐   ┌──────────────┬─────────────┬─────────────┬───┬───┬────┐
-//    │ !  │  É   │ É │ ^  │  `   │  no  │   │      no      │      |      │    TODO     │ ` │ ~ │ no │
-//    ├────┼──────┼───┼────┼──────┼──────┤   ├──────────────┼─────────────┼─────────────┼───┼───┼────┤
-//    │ À  │  {   │ [ │ (  │  -   │  no  │   │      no      │      =      │      )      │ ] │ } │ :  │
-//    ├────┼──────┼───┼────┼──────┼──────┘   └──────────────┼─────────────┼─────────────┼───┼───┼────┤
-//    │ no │ TODO │ Ç │ _  │  <   │                         │      >      │      +      │ ' │ " │ \  │
-//    └────┴──────┴───┼────┼──────┼──────┐   ┌──────────────┼─────────────┼─────────────┼───┴───┴────┘
+//    ┌────┬──────┬───┬────┬──────┬──────┐   ┌──────────────┬─────────────┬─────────────┬───────┬───┬────┐
+//    │ !  │  É   │ É │ ^  │  `   │  no  │   │      no      │      |      │    TODO     │ M_GRV │ ~ │ no │
+//    ├────┼──────┼───┼────┼──────┼──────┤   ├──────────────┼─────────────┼─────────────┼───────┼───┼────┤
+//    │ À  │  {   │ [ │ (  │  -   │  no  │   │      no      │      =      │      )      │   ]   │ } │ :  │
+//    ├────┼──────┼───┼────┼──────┼──────┘   └──────────────┼─────────────┼─────────────┼───────┼───┼────┤
+//    │ no │ TODO │ Ç │ _  │  <   │                         │      >      │      +      │   '   │ " │ \  │
+//    └────┴──────┴───┼────┼──────┼──────┐   ┌──────────────┼─────────────┼─────────────┼───────┴───┴────┘
 //                    │ no │ lsft │ lsft │   │ TO(L_SYSTEM) │ TO(L_ALPHA) │ TO(L_ALPHA) │
 //                    └────┴──────┴──────┘   └──────────────┴─────────────┴─────────────┘
 [L_SYMBOL] = LAYOUT_split_3x5_3_ex2(
-  KC_EXLM , CA_EGRV , CA_EACU , CA_CIRC , CA_GRV  , XXXXXXX ,     XXXXXXX      , CA_PIPE     , TODO        , CA_GRV  , CA_DTIL , XXXXXXX,
+  KC_EXLM , CA_EGRV , CA_EACU , CA_CIRC , CA_GRV  , XXXXXXX ,     XXXXXXX      , CA_PIPE     , TODO        , M_GRV   , CA_DTIL , XXXXXXX,
   CA_AGRV , CA_LCBR , CA_LBRC , CA_LPRN , KC_MINS , XXXXXXX ,     XXXXXXX      , KC_EQL      , CA_RPRN     , CA_RBRC , CA_RCBR , KC_COLN,
   XXXXXXX , TODO    , CA_CCED , KC_UNDS , CA_LABK ,                              CA_RABK     , KC_PLUS     , CA_QUOT , CA_DQUO , CA_BSLS,
                                 XXXXXXX , KC_LSFT , KC_LSFT ,     TO(L_SYSTEM) , TO(L_ALPHA) , TO(L_ALPHA)
