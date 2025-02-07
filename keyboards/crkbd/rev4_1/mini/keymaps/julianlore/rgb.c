@@ -1,23 +1,25 @@
 #include QMK_KEYBOARD_H
 #include "layers.h"
 
+bool set_color_all_and_stop(uint8_t r, uint8_t g, uint8_t b) {
+    rgb_matrix_set_color_all(r, g, b);
+    return false;
+}
+
 bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
     switch (get_highest_layer(layer_state | default_layer_state)) {
+        case L_ALPHA:
+            return set_color_all_and_stop(RGB_OFF);
         case L_NAV:
-            rgb_matrix_set_color_all(RGB_GREEN);
-            break;
+            return set_color_all_and_stop(RGB_GREEN);
         case L_NUM:
-            rgb_matrix_set_color_all(RGB_CYAN);
-            break;
+            return set_color_all_and_stop(RGB_CYAN);
         case L_SYMBOL:
-            rgb_matrix_set_color_all(RGB_PINK);
-            break;
+            return set_color_all_and_stop(RGB_PINK);
         case L_SHORTCUT:
-            rgb_matrix_set_color_all(RGB_ORANGE);
-            break;
+            return set_color_all_and_stop(RGB_ORANGE);
         case L_SYSTEM:
-            rgb_matrix_set_color_all(RGB_RED);
-            break;
+            return set_color_all_and_stop(RGB_RED);
         default:
             break;
     }
