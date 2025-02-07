@@ -21,8 +21,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "keymap_canadian_multilingual.h"
 #include "layers.h"
 
-#define TODO XXXXXXX
-
 // Formatted with qmk.nvim: https://github.com/codethread/qmk.nvim/
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //    ┌───────────┬───────────┬───────────┬─────────────┬─────────────────────┬───────────┐   ┌───────────────────┬──────────────┬───────────┬───────────┬───────────┬───────────┐
@@ -41,19 +39,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                LSFT_T(KC_TAB) , LT(L_SHORTCUT, KC_SPC) , MO(L_NAV) ,     LT(L_SYMBOL, KC_ENT) , LSFT_T(KC_BSPC) , MO(L_NUM)
 ),
 
-//    ┌──────┬────────────┬──────┬───────────┬─────────────┬─────────────┐   ┌─────┬───────────┬─────────┬───────────────┬─────────────────┬─────────┐
-//    │ esc  │    home    │  up  │    end    │    pgup     │ www_forward │   │ no  │  LCTL(c)  │ LCTL(z) │      ins      │      pscr       │ LCTL(v) │
-//    ├──────┼────────────┼──────┼───────────┼─────────────┼─────────────┤   ├─────┼───────────┼─────────┼───────────────┼─────────────────┼─────────┤
-//    │ lsft │    left    │ down │   rght    │    pgdn     │  www_back   │   │ no  │ LSFT(ins) │  lctl   │     lsft      │      lalt       │  lgui   │
-//    ├──────┼────────────┼──────┼───────────┼─────────────┼─────────────┘   └─────┼───────────┼─────────┼───────────────┼─────────────────┼─────────┤
-//    │ lctl │ LCTL(home) │ TODO │ LCTL(end) │     no      │                       │   TODO    │   tab   │ LCTL(LSFT(;)) │ LCTL(LALT(del)) │   no    │
-//    └──────┴────────────┴──────┼───────────┼─────────────┼─────────────┐   ┌─────┼───────────┼─────────┼───────────────┴─────────────────┴─────────┘
-//                               │           │ TO(L_ALPHA) │ TO(L_ALPHA) │   │ esc │    del    │  bspc   │
-//                               └───────────┴─────────────┴─────────────┘   └─────┴───────────┴─────────┘
+//    ┌──────┬────────────┬───────┬───────────┬─────────────┬─────────────┐   ┌─────┬───────────┬─────────┬───────────────┬─────────────────┬─────────┐
+//    │ esc  │    home    │  up   │    end    │    pgup     │ www_forward │   │ no  │  LCTL(c)  │ LCTL(z) │      ins      │      pscr       │ LCTL(v) │
+//    ├──────┼────────────┼───────┼───────────┼─────────────┼─────────────┤   ├─────┼───────────┼─────────┼───────────────┼─────────────────┼─────────┤
+//    │ lsft │    left    │ down  │   rght    │    pgdn     │  www_back   │   │ no  │ LSFT(ins) │  lctl   │     lsft      │      lalt       │  lgui   │
+//    ├──────┼────────────┼───────┼───────────┼─────────────┼─────────────┘   └─────┼───────────┼─────────┼───────────────┼─────────────────┼─────────┤
+//    │ lctl │ LCTL(home) │ M_CEH │ LCTL(end) │     no      │                       │ M_TMUXSCR │   tab   │ LCTL(LSFT(;)) │ LCTL(LALT(del)) │   no    │
+//    └──────┴────────────┴───────┼───────────┼─────────────┼─────────────┐   ┌─────┼───────────┼─────────┼───────────────┴─────────────────┴─────────┘
+//                                │           │ TO(L_ALPHA) │ TO(L_ALPHA) │   │ esc │    del    │  bspc   │
+//                                └───────────┴─────────────┴─────────────┘   └─────┴───────────┴─────────┘
 [L_NAV] = LAYOUT_split_3x5_3_ex2(
   KC_ESC  , KC_HOME       , KC_UP   , KC_END       , KC_PGUP     , KC_WWW_FORWARD ,     XXXXXXX , LCTL(KC_C)      , LCTL(KC_Z) , KC_INSERT           , KC_PSCR            , LCTL(KC_V),
   KC_LSFT , KC_LEFT       , KC_DOWN , KC_RIGHT     , KC_PGDN     , KC_WWW_BACK    ,     XXXXXXX , LSFT(KC_INSERT) , KC_LCTL    , KC_LSFT             , KC_LALT            , KC_LGUI   ,
-  KC_LCTL , LCTL(KC_HOME) , TODO    , LCTL(KC_END) , XXXXXXX     ,                                TODO            , KC_TAB     , LCTL(LSFT(KC_SCLN)) , LCTL(LALT(KC_DEL)) , XXXXXXX   ,
+  KC_LCTL , LCTL(KC_HOME) , M_CEH   , LCTL(KC_END) , XXXXXXX     ,                                M_TMUXSCR       , KC_TAB     , LCTL(LSFT(KC_SCLN)) , LCTL(LALT(KC_DEL)) , XXXXXXX   ,
                                       _______      , TO(L_ALPHA) , TO(L_ALPHA)    ,     KC_ESC  , KC_DEL          , KC_BSPC
 ),
 
@@ -73,19 +71,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                               _______ , KC_LSFT , _______ ,     _______ , TO(L_ALPHA) , TO(L_ALPHA)
 ),
 
-//    ┌────┬──────┬───┬────┬──────┬──────┐   ┌──────────────┬─────────────┬─────────────┬───────┬───┬────┐
-//    │ !  │  É   │ É │ ^  │  `   │  no  │   │      no      │      |      │    TODO     │ M_GRV │ ~ │ no │
-//    ├────┼──────┼───┼────┼──────┼──────┤   ├──────────────┼─────────────┼─────────────┼───────┼───┼────┤
-//    │ À  │  {   │ [ │ (  │  -   │  no  │   │      no      │      =      │      )      │   ]   │ } │ :  │
-//    ├────┼──────┼───┼────┼──────┼──────┘   └──────────────┼─────────────┼─────────────┼───────┼───┼────┤
-//    │ no │ TODO │ Ç │ _  │  <   │                         │      >      │      +      │   '   │ " │ \  │
-//    └────┴──────┴───┼────┼──────┼──────┐   ┌──────────────┼─────────────┼─────────────┼───────┴───┴────┘
-//                    │ no │ lsft │ lsft │   │ TO(L_SYSTEM) │ TO(L_ALPHA) │ TO(L_ALPHA) │
-//                    └────┴──────┴──────┘   └──────────────┴─────────────┴─────────────┘
+//    ┌────┬───────┬───┬────┬──────┬──────┐   ┌──────────────┬─────────────┬─────────────┬───────┬───┬────┐
+//    │ !  │   É   │ É │ ^  │  `   │  no  │   │      no      │      |      │   M_ARROW   │ M_GRV │ ~ │ no │
+//    ├────┼───────┼───┼────┼──────┼──────┤   ├──────────────┼─────────────┼─────────────┼───────┼───┼────┤
+//    │ À  │   {   │ [ │ (  │  -   │  no  │   │      no      │      =      │      )      │   ]   │ } │ :  │
+//    ├────┼───────┼───┼────┼──────┼──────┘   └──────────────┼─────────────┼─────────────┼───────┼───┼────┤
+//    │ no │ M_GRV │ Ç │ _  │  <   │                         │      >      │      +      │   '   │ " │ \  │
+//    └────┴───────┴───┼────┼──────┼──────┐   ┌──────────────┼─────────────┼─────────────┼───────┴───┴────┘
+//                     │ no │ lsft │ lsft │   │ TO(L_SYSTEM) │ TO(L_ALPHA) │ TO(L_ALPHA) │
+//                     └────┴──────┴──────┘   └──────────────┴─────────────┴─────────────┘
 [L_SYMBOL] = LAYOUT_split_3x5_3_ex2(
-  KC_EXLM , CA_EGRV , CA_EACU , CA_CIRC , CA_GRV  , XXXXXXX ,     XXXXXXX      , CA_PIPE     , TODO        , M_GRV   , CA_DTIL , XXXXXXX,
+  KC_EXLM , CA_EGRV , CA_EACU , CA_CIRC , CA_GRV  , XXXXXXX ,     XXXXXXX      , CA_PIPE     , M_ARROW     , M_GRV   , CA_DTIL , XXXXXXX,
   CA_AGRV , CA_LCBR , CA_LBRC , CA_LPRN , KC_MINS , XXXXXXX ,     XXXXXXX      , KC_EQL      , CA_RPRN     , CA_RBRC , CA_RCBR , KC_COLN,
-  XXXXXXX , TODO    , CA_CCED , KC_UNDS , CA_LABK ,                              CA_RABK     , KC_PLUS     , CA_QUOT , CA_DQUO , CA_BSLS,
+  XXXXXXX , M_GRV   , CA_CCED , KC_UNDS , CA_LABK ,                              CA_RABK     , KC_PLUS     , CA_QUOT , CA_DQUO , CA_BSLS,
                                 XXXXXXX , KC_LSFT , KC_LSFT ,     TO(L_SYSTEM) , TO(L_ALPHA) , TO(L_ALPHA)
 ),
 
