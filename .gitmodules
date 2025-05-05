@@ -1,0 +1,3 @@
+[submodule "keyboards/crkbd/rev4_1/mini/keymaps/julianlore/sm_td"]
+	path = keyboards/crkbd/rev4_1/mini/keymaps/julianlore/sm_td
+	url = https://github.com/stasmarkin/sm_td.git
