@@ -22,6 +22,5 @@ void on_smtd_action(uint16_t keycode, smtd_action action, uint8_t tap_count) {
         SMTD_MT(CCA_SLSH, CA_SLSH, KC_LSFT)
 
         SMTD_LT(CKC_SPC, KC_SPC, L_SHORTCUT)
-        SMTD_MT(CKC_BSPC, KC_BSPC, KC_LSFT)
     }
 }

@@ -23,20 +23,20 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // Formatted with qmk.nvim: https://github.com/codethread/qmk.nvim/
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-//    ┌────┬────┬────┬─────────────┬──────┬───────────┐   ┌───────────────────┬───────┬───────────┬────┬────┬────┐
-//    │ q  │ w  │ e  │      r      │  t   │   lctl    │   │ LCTL(LALT(home))  │   y   │     u     │ i  │ o  │ p  │
-//    ├────┼────┼────┼─────────────┼──────┼───────────┤   ├───────────────────┼───────┼───────────┼────┼────┼────┤
-//    │ Ca │ Cs │ Cd │     Cf      │  g   │    f14    │   │      LCTL(a)      │   h   │    Cj     │ Ck │ Cl │ C; │
-//    ├────┼────┼────┼─────────────┼──────┼───────────┘   └───────────────────┼───────┼───────────┼────┼────┼────┤
-//    │ Cz │ Cx │ Cc │      v      │  b   │                                   │   n   │     m     │ C, │ C. │ C/ │
-//    └────┴────┴────┼─────────────┼──────┼───────────┐   ┌───────────────────┼───────┼───────────┼────┴────┴────┘
-//                   │ LSFT_T(tab) │ Cspc │ MO(L_NAV) │   │ LT(L_SYMBOL, ent) │ Cbspc │ MO(L_NUM) │
-//                   └─────────────┴──────┴───────────┘   └───────────────────┴───────┴───────────┘
+//    ┌────┬────┬────┬─────────────┬──────┬───────────┐   ┌───────────────────┬──────────────┬───────────┬────┬────┬────┐
+//    │ q  │ w  │ e  │      r      │  t   │   lctl    │   │ LCTL(LALT(home))  │      y       │     u     │ i  │ o  │ p  │
+//    ├────┼────┼────┼─────────────┼──────┼───────────┤   ├───────────────────┼──────────────┼───────────┼────┼────┼────┤
+//    │ Ca │ Cs │ Cd │     Cf      │  g   │    f14    │   │      LCTL(a)      │      h       │    Cj     │ Ck │ Cl │ C; │
+//    ├────┼────┼────┼─────────────┼──────┼───────────┘   └───────────────────┼──────────────┼───────────┼────┼────┼────┤
+//    │ Cz │ Cx │ Cc │      v      │  b   │                                   │      n       │     m     │ C, │ C. │ C/ │
+//    └────┴────┴────┼─────────────┼──────┼───────────┐   ┌───────────────────┼──────────────┼───────────┼────┴────┴────┘
+//                   │ LSFT_T(tab) │ Cspc │ MO(L_NAV) │   │ LT(L_SYMBOL, ent) │ LSFT_T(bspc) │ MO(L_NUM) │
+//                   └─────────────┴──────┴───────────┘   └───────────────────┴──────────────┴───────────┘
 [L_ALPHA] = LAYOUT_split_3x5_3_ex2(
-  KC_Q  , KC_W  , KC_E  , KC_R           , KC_T    , KC_LCTL   ,     LCTL(LALT(KC_HOME))  , KC_Y     , KC_U      , KC_I     , KC_O    , KC_P    ,
-  CKC_A , CKC_S , CKC_D , CKC_F          , KC_G    , KC_F14    ,     LCTL(KC_A)           , KC_H     , CKC_J     , CKC_K    , CKC_L   , CKC_SCLN,
-  CKC_Z , CKC_X , CKC_C , KC_V           , KC_B    ,                                        KC_N     , KC_M      , CKC_COMM , CKC_DOT , CCA_SLSH,
-                          LSFT_T(KC_TAB) , CKC_SPC , MO(L_NAV) ,     LT(L_SYMBOL, KC_ENT) , CKC_BSPC , MO(L_NUM)
+  KC_Q  , KC_W  , KC_E  , KC_R           , KC_T    , KC_LCTL   ,     LCTL(LALT(KC_HOME))  , KC_Y            , KC_U      , KC_I     , KC_O    , KC_P    ,
+  CKC_A , CKC_S , CKC_D , CKC_F          , KC_G    , KC_F14    ,     LCTL(KC_A)           , KC_H            , CKC_J     , CKC_K    , CKC_L   , CKC_SCLN,
+  CKC_Z , CKC_X , CKC_C , KC_V           , KC_B    ,                                        KC_N            , KC_M      , CKC_COMM , CKC_DOT , CCA_SLSH,
+                          LSFT_T(KC_TAB) , CKC_SPC , MO(L_NAV) ,     LT(L_SYMBOL, KC_ENT) , LSFT_T(KC_BSPC) , MO(L_NUM)
 ),
 
 //    ┌──────┬────────────┬───────┬───────────┬─────────────┬─────────────┐   ┌─────┬───────────┬────────────┬───────────────┬─────────────────┬─────────┐
