@@ -23,6 +23,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define RGB_MATRIX_DEFAULT_VAL 100 // 0 - 255
 // For per layer RGB to work on both sides
 #define SPLIT_LAYER_STATE_ENABLE
+// 200 is the default, but we document it explicitly here for reference
+#define TAPPING_TERM 200
 // For sm_td
 #define MAX_DEFERRED_EXECUTORS 10
 #define PERMISSIVE_HOLD
+// Default is TAPPING_TERM / 4. Lowering the value will avoid considering the release of two keys in this term as holds, i.e. avoid holds for fast typing.
+#define SMTD_GLOBAL_RELEASE_TERM TAPPING_TERM / 8
