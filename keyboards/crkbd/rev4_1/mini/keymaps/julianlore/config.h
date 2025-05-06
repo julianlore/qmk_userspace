@@ -25,3 +25,4 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define SPLIT_LAYER_STATE_ENABLE
 // For sm_td
 #define MAX_DEFERRED_EXECUTORS 10
+#define PERMISSIVE_HOLD
