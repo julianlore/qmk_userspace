@@ -18,6 +18,8 @@ bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
             return set_color_all_and_stop(RGB_PINK);
         case L_SHORTCUT:
             return set_color_all_and_stop(RGB_ORANGE);
+        case L_MOUSE:
+            return set_color_all_and_stop(RGB_GOLD);
         case L_SYSTEM:
             return set_color_all_and_stop(RGB_RED);
         default:
