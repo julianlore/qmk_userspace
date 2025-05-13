@@ -23,20 +23,20 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // Formatted with qmk.nvim: https://github.com/codethread/qmk.nvim/
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-//    ┌────┬────┬────┬─────────────┬──────┬───────────┐   ┌───────────────────┬──────────────┬────────────┬────┬────┬────┐
-//    │ q  │ w  │ e  │      r      │  t   │   lctl    │   │ LCTL(LALT(home))  │      y       │     u      │ i  │ o  │ p  │
-//    ├────┼────┼────┼─────────────┼──────┼───────────┤   ├───────────────────┼──────────────┼────────────┼────┼────┼────┤
-//    │ Ca │ Cs │ Cd │     Cf      │  g   │    f14    │   │      LCTL(a)      │      h       │     Cj     │ Ck │ Cl │ C; │
-//    ├────┼────┼────┼─────────────┼──────┼───────────┘   └───────────────────┼──────────────┼────────────┼────┼────┼────┤
-//    │ Cz │ Cx │ Cc │      v      │  b   │                                   │      n       │     m      │ C, │ C. │ C/ │
-//    └────┴────┴────┼─────────────┼──────┼───────────┐   ┌───────────────────┼──────────────┼────────────┼────┴────┴────┘
-//                   │ LSFT_T(tab) │ Cspc │ MO(L_NAV) │   │ LT(L_SYMBOL, ent) │ LSFT_T(bspc) │ OSL(L_NUM) │
-//                   └─────────────┴──────┴───────────┘   └───────────────────┴──────────────┴────────────┘
+//    ┌────┬────┬────┬─────────────┬──────┬────────────┐   ┌───────────────────┬──────────────┬────────────┬────┬────┬────┐
+//    │ q  │ w  │ e  │      r      │  t   │    lctl    │   │ LCTL(LALT(home))  │      y       │     u      │ i  │ o  │ p  │
+//    ├────┼────┼────┼─────────────┼──────┼────────────┤   ├───────────────────┼──────────────┼────────────┼────┼────┼────┤
+//    │ Ca │ Cs │ Cd │     Cf      │  g   │    f14     │   │      LCTL(a)      │      h       │     Cj     │ Ck │ Cl │ C; │
+//    ├────┼────┼────┼─────────────┼──────┼────────────┘   └───────────────────┼──────────────┼────────────┼────┼────┼────┤
+//    │ Cz │ Cx │ Cc │      v      │  b   │                                    │      n       │     m      │ C, │ C. │ C/ │
+//    └────┴────┴────┼─────────────┼──────┼────────────┐   ┌───────────────────┼──────────────┼────────────┼────┴────┴────┘
+//                   │ LSFT_T(tab) │ Cspc │ OSL(L_NAV) │   │ LT(L_SYMBOL, ent) │ LSFT_T(bspc) │ OSL(L_NUM) │
+//                   └─────────────┴──────┴────────────┘   └───────────────────┴──────────────┴────────────┘
 [L_ALPHA] = LAYOUT_split_3x5_3_ex2(
-  KC_Q  , KC_W  , KC_E  , KC_R           , KC_T    , KC_LCTL   ,     LCTL(LALT(KC_HOME))  , KC_Y            , KC_U       , KC_I     , KC_O    , KC_P    ,
-  CKC_A , CKC_S , CKC_D , CKC_F          , KC_G    , KC_F14    ,     LCTL(KC_A)           , KC_H            , CKC_J      , CKC_K    , CKC_L   , CKC_SCLN,
-  CKC_Z , CKC_X , CKC_C , KC_V           , KC_B    ,                                        KC_N            , KC_M       , CKC_COMM , CKC_DOT , CCA_SLSH,
-                          LSFT_T(KC_TAB) , CKC_SPC , MO(L_NAV) ,     LT(L_SYMBOL, KC_ENT) , LSFT_T(KC_BSPC) , OSL(L_NUM)
+  KC_Q  , KC_W  , KC_E  , KC_R           , KC_T    , KC_LCTL    ,     LCTL(LALT(KC_HOME))  , KC_Y            , KC_U       , KC_I     , KC_O    , KC_P    ,
+  CKC_A , CKC_S , CKC_D , CKC_F          , KC_G    , KC_F14     ,     LCTL(KC_A)           , KC_H            , CKC_J      , CKC_K    , CKC_L   , CKC_SCLN,
+  CKC_Z , CKC_X , CKC_C , KC_V           , KC_B    ,                                         KC_N            , KC_M       , CKC_COMM , CKC_DOT , CCA_SLSH,
+                          LSFT_T(KC_TAB) , CKC_SPC , OSL(L_NAV) ,     LT(L_SYMBOL, KC_ENT) , LSFT_T(KC_BSPC) , OSL(L_NUM)
 ),
 
 //    ┌──────┬────────────┬───────┬───────────┬─────────────┬─────────────┐   ┌─────┬───────────┬────────────┬───────────────┬─────────────────┬─────────┐
@@ -46,13 +46,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //    ├──────┼────────────┼───────┼───────────┼─────────────┼─────────────┘   └─────┼───────────┼────────────┼───────────────┼─────────────────┼─────────┤
 //    │ lctl │ LCTL(home) │ M_CEH │ LCTL(end) │     no      │                       │ M_TMUXSCR │    tab     │ LCTL(LSFT(;)) │ LCTL(LALT(del)) │   no    │
 //    └──────┴────────────┴───────┼───────────┼─────────────┼─────────────┐   ┌─────┼───────────┼────────────┼───────────────┴─────────────────┴─────────┘
-//                                │           │ TO(L_ALPHA) │ TO(L_ALPHA) │   │ esc │    del    │ LSFT(lgui) │
+//                                │           │ TO(L_MOUSE) │ TO(L_ALPHA) │   │ esc │    del    │ LSFT(lgui) │
 //                                └───────────┴─────────────┴─────────────┘   └─────┴───────────┴────────────┘
 [L_NAV] = LAYOUT_split_3x5_3_ex2(
   KC_ESC  , KC_HOME       , KC_UP   , KC_END       , KC_PGUP     , KC_WWW_FORWARD ,     XXXXXXX , LCTL(KC_C)      , LCTL(KC_Z)    , KC_INSERT           , KC_PSCR            , LCTL(KC_V),
   KC_LSFT , KC_LEFT       , KC_DOWN , KC_RIGHT     , KC_PGDN     , KC_WWW_BACK    ,     XXXXXXX , LSFT(KC_INSERT) , KC_LCTL       , KC_LSFT             , KC_LALT            , KC_LGUI   ,
   KC_LCTL , LCTL(KC_HOME) , M_CEH   , LCTL(KC_END) , XXXXXXX     ,                                M_TMUXSCR       , KC_TAB        , LCTL(LSFT(KC_SCLN)) , LCTL(LALT(KC_DEL)) , XXXXXXX   ,
-                                      _______      , TO(L_ALPHA) , TO(L_ALPHA)    ,     KC_ESC  , KC_DEL          , LSFT(KC_LGUI)
+                                      _______      , TO(L_MOUSE) , TO(L_ALPHA)    ,     KC_ESC  , KC_DEL          , LSFT(KC_LGUI)
 ),
 
 //    ┌────┬────┬────┬─────┬──────┬─────┐   ┌─────┬─────────────┬─────────────┬─────┬─────┬─────┐
