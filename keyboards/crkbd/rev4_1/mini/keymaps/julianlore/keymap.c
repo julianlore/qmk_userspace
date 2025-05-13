@@ -87,18 +87,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                 XXXXXXX , KC_LSFT , KC_LSFT ,     TO(L_SYSTEM) , TO(L_ALPHA) , TO(L_ALPHA)
 ),
 
-//    ┌─────────┬───────────┬───────────┬──────────────┬─────────────┬─────────────┐   ┌─────────┬───────────────┬─────┬───────────┬────┬───────────────┐
-//    │ LWIN(6) │  LWIN(5)  │  M_MS_UP  │     f22      │   LWIN(4)   │ LALT(left)  │   │   no    │ LCTL(LSFT(c)) │ no  │ LSFT(ins) │ no │ LCTL(LSFT(v)) │
-//    ├─────────┼───────────┼───────────┼──────────────┼─────────────┼─────────────┤   ├─────────┼───────────────┼─────┼───────────┼────┼───────────────┤
-//    │ LWIN(1) │ M_MS_LEFT │ M_MS_DOWN │  M_MS_RGHT   │   LWIN(5)   │ LALT(rght)  │   │ QK_BOOT │      no       │ no  │    no     │ no │      no       │
-//    ├─────────┼───────────┼───────────┼──────────────┼─────────────┼─────────────┘   └─────────┼───────────────┼─────┼───────────┼────┼───────────────┤
-//    │   no    │  LWIN(3)  │  LWIN(2)  │   LWIN(3)    │   LWIN(1)   │                           │      no       │ no  │    no     │ no │      no       │
-//    └─────────┴───────────┴───────────┼──────────────┼─────────────┼─────────────┐   ┌─────────┼───────────────┼─────┼───────────┴────┴───────────────┘
-//                                      │ TO(L_SYSTEM) │ TO(L_ALPHA) │ TO(L_ALPHA) │   │         │               │     │
-//                                      └──────────────┴─────────────┴─────────────┘   └─────────┴───────────────┴─────┘
+//    ┌─────────┬─────────┬─────────┬──────────────┬─────────────┬─────────────┐   ┌─────────┬───────────────┬─────┬───────────┬────┬───────────────┐
+//    │ LWIN(6) │ LWIN(5) │   f22   │   LWIN(7)    │   LWIN(4)   │ LALT(left)  │   │   no    │ LCTL(LSFT(c)) │ no  │ LSFT(ins) │ no │ LCTL(LSFT(v)) │
+//    ├─────────┼─────────┼─────────┼──────────────┼─────────────┼─────────────┤   ├─────────┼───────────────┼─────┼───────────┼────┼───────────────┤
+//    │ LWIN(1) │ LWIN(2) │ LWIN(3) │   LWIN(4)    │   LWIN(5)   │ LALT(rght)  │   │ QK_BOOT │      no       │ no  │    no     │ no │      no       │
+//    ├─────────┼─────────┼─────────┼──────────────┼─────────────┼─────────────┘   └─────────┼───────────────┼─────┼───────────┼────┼───────────────┤
+//    │   no    │ LWIN(3) │ LWIN(2) │   LWIN(3)    │   LWIN(1)   │                           │      no       │ no  │    no     │ no │      no       │
+//    └─────────┴─────────┴─────────┼──────────────┼─────────────┼─────────────┐   ┌─────────┼───────────────┼─────┼───────────┴────┴───────────────┘
+//                                  │ TO(L_SYSTEM) │ TO(L_ALPHA) │ TO(L_ALPHA) │   │         │               │     │
+//                                  └──────────────┴─────────────┴─────────────┘   └─────────┴───────────────┴─────┘
 [L_SHORTCUT] = LAYOUT_split_3x5_3_ex2(
-  LWIN(KC_6) , LWIN(KC_5) , M_MS_UP    , KC_F22       , LWIN(KC_4)  , LALT(KC_LEFT)  ,     XXXXXXX , LCTL(LSFT(KC_C)) , XXXXXXX , LSFT(KC_INS) , XXXXXXX , LCTL(LSFT(KC_V)),
-  LWIN(KC_1) , M_MS_LEFT  , M_MS_DOWN  , M_MS_RGHT    , LWIN(KC_5)  , LALT(KC_RIGHT) ,     QK_BOOT , XXXXXXX          , XXXXXXX , XXXXXXX      , XXXXXXX , XXXXXXX         ,
+  LWIN(KC_6) , LWIN(KC_5) , KC_F22     , LWIN(KC_7)   , LWIN(KC_4)  , LALT(KC_LEFT)  ,     XXXXXXX , LCTL(LSFT(KC_C)) , XXXXXXX , LSFT(KC_INS) , XXXXXXX , LCTL(LSFT(KC_V)),
+  LWIN(KC_1) , LWIN(KC_2) , LWIN(KC_3) , LWIN(KC_4)   , LWIN(KC_5)  , LALT(KC_RIGHT) ,     QK_BOOT , XXXXXXX          , XXXXXXX , XXXXXXX      , XXXXXXX , XXXXXXX         ,
   XXXXXXX    , LWIN(KC_3) , LWIN(KC_2) , LWIN(KC_3)   , LWIN(KC_1)  ,                                XXXXXXX          , XXXXXXX , XXXXXXX      , XXXXXXX , XXXXXXX         ,
                                          TO(L_SYSTEM) , TO(L_ALPHA) , TO(L_ALPHA)    ,     _______ , _______          , _______
 ),

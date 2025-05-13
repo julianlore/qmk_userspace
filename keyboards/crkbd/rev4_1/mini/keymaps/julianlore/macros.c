@@ -1,5 +1,4 @@
 #include "custom_keycodes.h"
-#include "layers.h"
 
 #define SSCA_GRV SS_RALT(SS_TAP(X_LBRC)) // CA_GRV = ALGR(CA_CIRC) = ALGR(KC_LBRC)
 #define SSCA_RABK SS_RALT(SS_TAP(X_DOT)) // CA_RABK = ALGR(CA_DOT) = ALGR(KC_DOT)
@@ -24,22 +23,6 @@ bool keypress_macros(uint16_t keycode) {
         case M_ARROW:
             // ->
             return SEND_STRING_AND_STOP("-" SSCA_RABK);
-        case M_MS_UP:
-        case M_MS_LEFT:
-        case M_MS_DOWN:
-        case M_MS_RGHT:
-            layer_lock_on(L_SHORTCUT);
-            layer_on(L_MOUSE);
-            switch (keycode) {
-                case M_MS_UP:
-                    return SEND_STRING_AND_STOP(SS_TAP(X_MS_UP));
-                case M_MS_LEFT:
-                    return SEND_STRING_AND_STOP(SS_TAP(X_MS_LEFT));
-                case M_MS_DOWN:
-                    return SEND_STRING_AND_STOP(SS_TAP(X_MS_DOWN));
-                case M_MS_RGHT:
-                    return SEND_STRING_AND_STOP(SS_TAP(X_MS_RIGHT));
-            }
     }
 
     return true;
