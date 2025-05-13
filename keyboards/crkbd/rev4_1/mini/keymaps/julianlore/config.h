@@ -25,6 +25,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define SPLIT_LAYER_STATE_ENABLE
 // 200 is the default, but we document it explicitly here for reference
 #define TAPPING_TERM 200
+#define MK_KINETIC_SPEED
 // For sm_td
 #define MAX_DEFERRED_EXECUTORS 10
 #define PERMISSIVE_HOLD
