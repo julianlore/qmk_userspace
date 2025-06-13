@@ -24,5 +24,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // For per layer RGB to work on both sides
 #define SPLIT_LAYER_STATE_ENABLE
 #define PERMISSIVE_HOLD
+#define HOLD_ON_OTHER_KEY_PRESS_PER_KEY
 // Time for which tap-holds will be filtered to taps, lower prioritizes more holds
 #define FLOW_TAP_TERM 125
